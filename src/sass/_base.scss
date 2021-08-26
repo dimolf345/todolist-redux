@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.heading {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  color: white;
+  font-size: 2.6rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+//UTILITY CLASSES
+.u-margin-bottom-medium {
+  margin-bottom: 3rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+@media only screen and (min-width: $medium) {
+  .heading {
+    font-size: 4.8rem;
+  }
+}

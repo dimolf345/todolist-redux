@@ -1,0 +1,35 @@
+.todoapp {
+  position: relative;
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 1rem 0;
+
+  &__button {
+    width: 2.6rem;
+    height: 2.6rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    cursor: pointer;
+
+    &--dark {
+      background-image: url("../../../images/icon-sun.svg");
+    }
+
+    &--light {
+      background-image: url("../../../images/icon-moon.svg");
+    }
+  }
+}
+
+.todocontainer {
+  min-height: 4.8rem;
+  border-radius: 5px;
+}

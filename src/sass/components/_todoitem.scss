@@ -1,0 +1,9 @@
+.todoitem {
+  display: flex;
+  padding: 1.6rem 2rem;
+
+  &__checkbox {
+    flex: 0 0 2.5rem;
+    display: block;
+  }
+}

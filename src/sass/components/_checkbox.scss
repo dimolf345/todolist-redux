@@ -1,0 +1,51 @@
+.checkbox-container {
+  flex: 0 0 2rem;
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  margin-right: 1.2rem;
+
+  .checkbox {
+    position: relative;
+    outline: none;
+    display: block;
+    cursor: pointer;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid $dark-dark-grayish-blue;
+    border-radius: 50%;
+
+    &:hover:not(:disabled) {
+      background: $check-background;
+    }
+
+    &:hover:not(:disabled)::after {
+      content: "";
+      width: 1.8rem;
+      height: 1.8rem;
+      position: absolute;
+      top: 0.5px;
+      left: 0.5px;
+      border-radius: 50%;
+    }
+
+    &:checked {
+      background: url("../../../images/icon-check.svg"), $check-background;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &--light {
+      &:hover:not(:disabled)::after {
+        background-color: white;
+      }
+    }
+
+    &--dark {
+      &:hover:not(:disabled)::after {
+        background-color: $dark-very-desaturated-blue;
+      }
+    }
+  }
+}
