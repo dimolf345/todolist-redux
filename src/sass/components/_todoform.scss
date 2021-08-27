@@ -2,6 +2,7 @@
   display: flex;
   flex: 1 1;
   transition: all 0.3s;
+  padding: 1.6rem 2rem;
 
   &__input {
     background-color: transparent;
@@ -10,10 +11,11 @@
     flex: 1 1;
     font-size: 1.5rem;
     color: $dark-dark-grayish-blue;
-    font-weight: 500;
+    font-weight: bold;
 
     &::placeholder {
       color: $dark-very-dark-grayish-blue;
+      font-weight: normal;
     }
   }
 

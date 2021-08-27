@@ -1,9 +1,27 @@
 .todoitem {
   display: flex;
   padding: 1.6rem 2rem;
+  align-items: center;
 
   &__checkbox {
     flex: 0 0 2.5rem;
     display: block;
   }
+
+  &__text {
+    flex: 1 1;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+
+    &--done {
+      text-decoration: line-through;
+      color: $light-light-grayish-blue;
+    }
+  }
+}
+
+.paragraph {
+  width: 100%;
+  display: inline;
+  overflow-wrap: anywhere;
 }

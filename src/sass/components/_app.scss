@@ -26,8 +26,29 @@
     border-bottom: 1px solid $dark-very-dark-grayish-blue;
   }
 
+  .todoitem__text {
+    color: $dark-light-grayish-blue;
+
+    &--done {
+      color: $dark-very-dark-grayish-blue;
+    }
+  }
+
+  .footer,
+  .filters {
+    color: $dark-dark-grayish-blue;
+  }
+
+  .filters__button:hover {
+    color: $dark-light-grayish-blue;
+  }
+
   .todocontainer {
     background-color: $dark-very-desaturated-blue;
+  }
+
+  .todoform__input {
+    color: $dark-light-grayish-blue;
   }
 }
 
@@ -41,8 +62,29 @@
     border-bottom: 1px solid $light-very-light-grayish-blue;
   }
 
+  .todoitem__text {
+    color: $light-very-dark-grayish-blue;
+
+    &--done {
+      color: $light-light-grayish-blue;
+    }
+  }
+
+  .footer,
+  .filters {
+    color: $dark-dark-grayish-blue;
+  }
+
+  .filters__button:hover {
+    color: $light-very-dark-grayish-blue;
+  }
+
   .todocontainer {
     background-color: white;
+  }
+
+  .todoform__input {
+    color: $dark-very-dark-grayish-blue-hov;
   }
 }
 
