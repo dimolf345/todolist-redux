@@ -1,6 +1,8 @@
 .todoapp {
   position: relative;
   z-index: 5;
+  max-width: 54rem;
+  margin: 0 auto;
 }
 
 .header {
@@ -30,7 +32,7 @@
 }
 
 .todocontainer {
-  min-height: 4.8rem;
+  min-height: 5.2rem;
   border-radius: 5px;
   height: max-content;
 }

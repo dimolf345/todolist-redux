@@ -13,6 +13,10 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  p.text-center {
+    font-size: 1.4rem !important;
+  }
 }
 
 .app--dark {
@@ -50,10 +54,14 @@
   .todoform__input {
     color: $dark-light-grayish-blue;
   }
+
+  p.text-center {
+    color: $dark-very-dark-grayish-blue;
+  }
 }
 
 .app--light {
-  background-color: #fafafa;
+  background-color: $light-very-light-gray;
   .background {
     background-image: url("../../images/bg-mobile-light.jpg");
   }
@@ -81,10 +89,15 @@
 
   .todocontainer {
     background-color: white;
+    box-shadow: 0px 8px 6px rgba(black, 0.05);
   }
 
   .todoform__input {
     color: $dark-very-dark-grayish-blue-hov;
+  }
+
+  p.text-center {
+    color: $light-dark-grayish-blue;
   }
 }
 
