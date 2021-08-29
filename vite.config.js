@@ -4,5 +4,13 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [reactRefresh()],
-  publicDir: "public",
 })
+
+module.exports = {
+  root: "./",
+  build: {
+    outDir: "dist",
+  },
+  publicDir: "public",
+};
+
