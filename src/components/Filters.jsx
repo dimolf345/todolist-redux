@@ -1,27 +1,31 @@
-import React from 'react'
+import React, {useRef } from 'react'
 import { setFilter } from '../redux/features/filterSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 
 const Filters = ({isDesktop}) => {
-    const options = ['ALL', 'ACTIVE', 'COMPLETED'];
-    const dispatch = useDispatch();
+    const options = ['all', 'active', 'completed'];
 
+    const dispatch = useDispatch();
+    const currentFilter = useSelector(state => state.filter)
 
     return (
-        <div className={`todocontainer filters ${isDesktop? 'filters--desktop': ''}`}>
+        <ul className={`todocontainer filters ${isDesktop? 'filters--desktop': 'filters--mobile'}`}>
             {options.map((option, index)=> {
                 return (
+                    <li key={index}> 
                     <button 
-                    key={index}
-                    onClick={()=> dispatch(setFilter(option))}
-                    className="filters__button">
-                        {option}
+                    onClick={()=> {                   
+                        dispatch(setFilter(option))
+                    }}
+                    className={`filters__button ${option === currentFilter? 'active' : ''}`}>
+                          {option} 
                     </button>
+                    </li>
                 )
             })}
-        </div>
+        </ul>
     )
 }
 

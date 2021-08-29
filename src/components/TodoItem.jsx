@@ -15,7 +15,7 @@ const TodoItem = ({item, index}) => {
         // index={index}
         // draggableId={item.id}
         // key={item.id}>
-           <div className={`todocontainer todoitem`}>
+           <div className={`todoitem`}>
                <Checkbox 
                checked={item.done}
                id={item.id}/>

@@ -23,7 +23,7 @@
   background-color: $dark-very-dark-blue;
 
   .background {
-    background-image: url("../../images/bg-mobile-dark.jpg");
+    background-image: url("public/images/bg-mobile-dark.jpg");
   }
 
   .todolist__item {
@@ -63,7 +63,7 @@
 .app--light {
   background-color: $light-very-light-gray;
   .background {
-    background-image: url("../../images/bg-mobile-light.jpg");
+    background-image: url("public/images/bg-mobile-light.jpg");
   }
 
   .todolist__item {
@@ -108,13 +108,13 @@
 
   .app--dark {
     .background {
-      background-image: url("../../images/bg-desktop-dark.jpg");
+      background-image: url("public/images/bg-desktop-dark.jpg");
     }
   }
 
   .app--light {
     .background {
-      background-image: url("../../images/bg-desktop-light.jpg");
+      background-image: url("public/images/bg-desktop-light.jpg");
     }
   }
 }

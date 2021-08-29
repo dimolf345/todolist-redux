@@ -22,11 +22,11 @@
     cursor: pointer;
 
     &--dark {
-      background-image: url("../../../images/icon-sun.svg");
+      background-image: url("public/images/icon-sun.svg");
     }
 
     &--light {
-      background-image: url("../../../images/icon-moon.svg");
+      background-image: url("public/images/icon-moon.svg");
     }
   }
 }

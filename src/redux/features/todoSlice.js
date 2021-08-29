@@ -1,7 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+function getTodos() {
+  if (localStorage.getItem("todos"))
+    return JSON.parse(localStorage.getItem("todos")).todos;
+  else return [];
+}
+
 const initialState = {
-  todos: [],
+  todos: getTodos(),
 };
 
 const todoSlice = createSlice({
@@ -14,6 +20,7 @@ const todoSlice = createSlice({
         id: Date.now(),
         done: false,
       });
+      localStorage.setItem("todos", JSON.stringify(state));
     },
 
     toggleTodo: (state, action) => {
@@ -24,16 +31,19 @@ const todoSlice = createSlice({
         }
         return item;
       });
+      localStorage.setItem("todos", JSON.stringify(state));
     },
 
     removeTodo: (state, action) => {
       state.todos = state.todos.filter((item) => {
         return item.id !== action.payload;
       });
+      localStorage.setItem("todos", JSON.stringify(state));
     },
 
     clearTodo: (state) => {
       state.todos = state.todos.filter((item) => !item.done);
+      localStorage.setItem("todos", JSON.stringify(state));
     },
   },
 });

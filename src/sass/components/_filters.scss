@@ -1,0 +1,40 @@
+.todocontainer.filters {
+  justify-content: center;
+}
+
+.active {
+  color: $color-light-blue !important;
+  font-weight: 500;
+}
+
+.filters {
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  &__button {
+    margin: 1rem;
+    text-transform: capitalize;
+    color: currentColor;
+    font-size: 1.4rem;
+    transition: color 0.5s;
+  }
+
+  &--desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $medium) {
+  .filters {
+    &--desktop {
+      display: flex;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+}

@@ -19,7 +19,7 @@ const TodoApp = () => {
 
   return (
     <DragDropContext onDragEnd={()=> console.log('end')}>
-    <main className="todoapp">
+    <main className="todoapp u-margin-bottom-medium">
       <Header 
         theme={theme} 
         handleClick={changeTheme}/>
@@ -27,7 +27,7 @@ const TodoApp = () => {
       <Todolist/>
       <Filters isDesktop={false}/>
     </main>
-    <p className="drag">Drag and drop to reorder the list</p>
+    <p className="text-center">Drag and drop to reorder the list</p>
     </DragDropContext>
   );
 };

@@ -7,9 +7,9 @@ import {clearTodo} from '../redux/features/todoSlice';
 const Footer = ({left}) => {
     const dispatch = useDispatch()
     return (
-        <footer className="footer">
+        <footer className="footer todoitem">
             <div className="footer__left">
-                <p className="paragraph">
+                <p className="footer__text">
                     {left===1 
                     ? `${left} item left` 
                     : `${left} items left`}

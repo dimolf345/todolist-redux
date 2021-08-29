@@ -12,13 +12,13 @@ const Todolist = () => {
 
     const createList = (filter) => {
         switch(filter) {
-            case 'ALL': 
+            case 'all': 
                 return list;
                 break;
-            case 'ACTIVE':
+            case 'active':
                 return list.filter((item)=> !item.done);
                 break;
-            case 'COMPLETED':
+            case 'completed':
                 return list.filter((item)=> item.done);
             default:
                 return list;
@@ -29,8 +29,9 @@ const Todolist = () => {
 
     return (
         // <Droppable droppableId="todolist">
-        <div className="todocontainer">
-            {list.length === 0 && <h1>There are no items yet</h1> }
+        <div className="todocontainer u-margin-bottom-small">
+            {list.length === 0 && 
+            <h1 className="todoitem__text todolist__item text-center">There are no items yet</h1> }
             <ul className="todolist">
             {activeList.map((item, index)=> <li key={item.id} className="todolist__item">
                 <TodoItem key={item.id} item={item} index={index}/>            </li>
