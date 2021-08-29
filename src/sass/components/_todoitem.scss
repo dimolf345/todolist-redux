@@ -1,0 +1,54 @@
+.todoitem {
+  display: flex;
+  padding: 1.6rem 2rem;
+  align-items: center;
+  position: relative;
+
+  &__checkbox {
+    flex: 0 0 2.5rem;
+    display: block;
+  }
+
+  &__text {
+    flex: 1 1;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+
+    &--done {
+      text-decoration: line-through;
+      color: $light-light-grayish-blue;
+    }
+  }
+
+  &__remove {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url("public/images/icon-cross.svg");
+    background-size: cover;
+  }
+
+  &:hover &__remove {
+    display: block !important;
+    z-index: 15;
+  }
+}
+
+.paragraph {
+  width: 100%;
+  display: inline;
+  overflow-wrap: anywhere;
+  padding-right: 2rem;
+}
+
+@media only screen and (min-width: $medium) {
+  .todoitem {
+    &__remove {
+      display: none;
+      animation: fadeInTop 0.5s ease-in-out;
+    }
+  }
+}
