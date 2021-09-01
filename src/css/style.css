@@ -133,7 +133,7 @@ a {
   .background {
     min-height: 30rem; }
   .app--dark .background {
-    background-image: url("../../../public/images/bg-desktop-dark.jpg"), url("../images/bg-mobile-dark.jpg"); }
+    background-image: url("../../../public/images/bg-desktop-dark.jpg"), url("../images/bg-desktop-dark.jpg"); }
   .app--light .background {
     background-image: url("../../../public/images/bg-desktop-light.jpg"), url("../images/bg-desktop-light.jpg"); } }
 
